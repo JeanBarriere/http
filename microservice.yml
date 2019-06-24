@@ -18,9 +18,6 @@ health:
     path: /
     port: 8889
 actions:
-  help: |
-    Make http calls and listen for http connections through the Asyncy Gateway
-    resulting in serverless http endpoints.
   fetch:
     help: |
       Make a HTTP request to the outside world.
@@ -52,6 +49,10 @@ actions:
       body:
         type: any
         in: requestBody
+    http:
+      port: 8889
+      path: /
+      method: get
     output:
       type: any
   server:
@@ -82,12 +83,10 @@ actions:
           contentType: application/json
           properties:
             body:
-              help: The JSON body of the HTTP request
               type: map
             headers:
-              help: The HTTP headers of the HTTP request
               type: map
-          actions:
+          commands:
             write:
               http: &response_http
                 contentType: application/json
