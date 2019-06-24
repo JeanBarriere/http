@@ -1,4 +1,15 @@
 omg: 1
+info:
+  version: 1.0.1
+  title: Currency Converter
+  description: This is a sample currency converter service
+  contact:
+    name: John Doe
+    url: https://support.example.com
+    email: support@example.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
 lifecycle:
   startup:
     command: ['python', '-m', 'app.main']
