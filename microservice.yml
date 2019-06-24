@@ -1,4 +1,8 @@
 omg: 1
+health:
+  http:
+    path: /
+    port: 8889
 actions:
   help: |
     Make http calls and listen for http connections through the Asyncy Gateway
