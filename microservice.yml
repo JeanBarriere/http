@@ -86,7 +86,7 @@ actions:
               type: map
             headers:
               type: map
-          commands:
+          actions:
             write:
               http: &response_http
                 contentType: application/json
